@@ -12,6 +12,9 @@
 
 * **Performance Summary**: I achieved an accuracy of 100%.
 
+  ![image](https://github.com/user-attachments/assets/a6ba6a38-cf96-4383-b4f2-481786275728)
+
+
 ## Summary of Work Done
 
 ### Data
