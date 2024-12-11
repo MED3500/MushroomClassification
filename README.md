@@ -24,11 +24,11 @@
   * **Size**: 8124 rows and 23 columns.
   * **Split**: The dataset is balanced, with 4208 edible and 3916 poisonous mushrooms. I used an 80/20 split to train.
 
+![image](https://github.com/user-attachments/assets/40763bcc-3927-42b5-8088-f6a6e40c271a)
+
 #### Preprocessing
 
 * No missing values were found, and all features are categorical. One-hot encoding was used to convert categorical features into numerical format for model input.
-
-![image](https://github.com/user-attachments/assets/40763bcc-3927-42b5-8088-f6a6e40c271a)
 
 #### Data Visualization
 
