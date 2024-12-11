@@ -2,7 +2,7 @@
 
 # Mushroom Classification Project
 
-* **One Sentence Summary**: This repository tackles the problem of classifying mushrooms as edible or poisonous using the [Kaggle Mushroom Classification dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data), employing machine learning models to predict mushroom safety based on their physical characteristics.
+This repository tackles the problem of classifying mushrooms as edible or poisonous using the [Kaggle Mushroom Classification dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data), employing machine learning models to predict mushroom safety based on their physical characteristics.
 
 ## Overview
 
