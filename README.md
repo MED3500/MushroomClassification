@@ -12,7 +12,7 @@
 
 * **Performance Summary**: I achieved an accuracy of 100%.
 
-  ![image](https://github.com/user-attachments/assets/a6ba6a38-cf96-4383-b4f2-481786275728)
+
 
 
 ## Summary of Work Done
@@ -28,10 +28,14 @@
 
 * No missing values were found, and all features are categorical. One-hot encoding was used to convert categorical features into numerical format for model input.
 
+![image](https://github.com/user-attachments/assets/40763bcc-3927-42b5-8088-f6a6e40c271a)
+
 #### Data Visualization
 
 * Class distribution is nearly balanced, with edible mushrooms slightly outnumbering poisonous ones. Being edible or inedible is very highly correlated to the rest of the data, as is shown by the heatmap.
 
+![image](https://github.com/user-attachments/assets/a6ba6a38-cf96-4383-b4f2-481786275728)
+  
 ### Problem Formulation
 
 * **Input/Output**:  
