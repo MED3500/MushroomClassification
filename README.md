@@ -1,39 +1,116 @@
-# Kaggle Tabular Project: Mushroom Classification
+![](UTA-DataScience-Logo.png)
 
-## Define Project
+# Mushroom Classification Project
 
-- **Project Link**: [Mushroom Classification Dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data)
+* **One Sentence Summary**: This repository tackles the problem of classifying mushrooms as edible or poisonous using the [Kaggle Mushroom Classification dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data), employing machine learning models to predict mushroom safety based on their physical characteristics.
 
-- **Challenge Description**:  
-  The goal is to use these characteristics to predict whether a mushroom is safe to eat given features like cap shape, odor, gill attachment, and habitat.
+## Overview
 
-- **Data Description**:  
-  The dataset consists of categorical features describing the mushrooms' physical traits and habitat. The target variable, `class`, indicates if the mushroom is `edible (e)` or `poisonous (p)`. There are no missing values, and the problem is a binary classification task.
+* **Task/Challenge**: The goal is to predict whether a mushroom is edible or poisonous based on its physical traits, like cap shape, odor, and habitat, in this binary classification problem.
 
+* **Approach**: The dataset is split into training and testing sets, with the features (excluding the target variable) being one-hot encoded using a pipeline that integrates preprocessing and model training. A Random Forest classifier is used, and the model is trained on the training data and evaluated on the test data. The performance is measured using accuracy, with results printed as a percentage.
 
+* **Performance Summary**: I achieved an accuracy of 100%.
 
-**Attribute Information**:
+## Summary of Work Done
 
-**classes**: edible=e, poisonous=p
+### Data
 
-**cap-shape**: bell=b,conical=c,convex=x,flat=f, knobbed=k,sunken=s
+* **Data**:
+  * **Type**: CSV file with 23 categorical features describing mushrooms, and a target variable (`class`) indicating whether the mushroom is edible (e) or poisonous (p).
+  * **Size**: 8124 rows and 23 columns.
+  * **Split**: The dataset is balanced, with 4208 edible and 3916 poisonous mushrooms. I used an 80/20 split to train.
 
-**cap-surface**: fibrous=f,grooves=g,scaly=y,smooth=s
+#### Preprocessing
 
-**cap-color**: brown=n,buff=b,cinnamon=c,gray=g,green=r,pink=p,purple=u,red=e,white=w,yellow=y
+* No missing values were found, and all features are categorical. One-hot encoding was used to convert categorical features into numerical format for model input.
 
-**bruises**: bruises=t,no=f
+#### Data Visualization
 
-**odor**: almond=a,anise=l,creosote=c,fishy=y,foul=f,musty=m,none=n,pungent=p,spicy=s
+* Class distribution is nearly balanced, with edible mushrooms slightly outnumbering poisonous ones. Being edible or inedible is very highly correlated to the rest of the data, as is shown by the heatmap.
 
-**gill-attachment**: attached=a,descending=d,free=f,notched=n
+### Problem Formulation
 
-**gill-spacing**: close=c,crowded=w,distant=d
+* **Input/Output**:  
+  * **Input**: 23 categorical features describing mushroom attributes.  
+  * **Output**: Binary classification (edible `e` or poisonous `p`).
 
-**gill-size**: broad=b,narrow=n
+* **Models**:  A **Random Forest Classifier** is used for its ability to handle categorical data and provide accurate predictions.
 
-**gill-color**: black=k,brown=n,buff=b,chocolate=h,gray=g, green=r,orange=o,pink=p,purple=u,red=e,white=w,yellow=y
+* **Loss, Optimizer, and Hyperparameters**:  
+  The model uses **accuracy** as the evaluation metric. Hyperparameters include 100 trees and a fixed random seed. Preprocessing is done with **OneHotEncoder**.
 
-**stalk-shape**: enlarging=e,tapering=t
+### Training
 
-**stalk-root**: bulbous=b,club=c,cup=u,equal=e,rhizomorphs=z,r
+* **How**:  The model is trained using a **Pipeline** that applies **OneHotEncoder** for categorical features and **Random Forest Classifier** with 100 trees.
+
+* **Training Time**: Training is quick, taking only a minute or two.
+
+* **Stopping Criteria**: The model trains until fully fitted, with no early stopping needed.
+
+* **Challenges**:  The main challenge was ensuring proper encoding of categorical features, which was managed within the pipeline.
+
+### Performance Comparison
+
+* **Key Metrics**: Accuracy was the primary metric, with confusion matrices and classification reports to evaluate model performance.
+
+* **Results (values written down from other test files)**:
+  | Model            | Accuracy |
+  |------------------|----------|
+  | Decision Tree    | 100%     |
+  | Logistic Reg.    | 98%      |
+  | SVM (RBF)        | 97%      |
+
+* **Visualization**: Confusion matrices highlight model performance across true positives, false positives, etc.
+
+### Conclusions
+
+* Logistic regression was the most accurate model, achieving 98%. This suggests it is well-suited for this classification task.
+
+### Future Work
+
+* From here I would like to take a try at the other datasets. I was originally working on the Bank Churn data set but my work was deleted. The same thing happened when I first tried to add the Mushroom Classification file. Because of the time constraint I had to switch to the Mushroom dataset to be able to submit everything on time, though I would like to go back and attempt the Bank Churn project again.
+
+## How to Reproduce Results
+
+* **Reproduce**: 
+  1. Clone this repository.
+  2. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification/data).
+  3. Run the Python file to train and evaluate the models.
+
+* **Resources**: I used Jupyter Notebook, I'd recommend using the same.
+
+### Overview of Files
+
+There are only two files in the repo - the README file and the MushroomClassification.ipynb. The ipynb file is the only one you need to run to reproduce my results.
+
+### Software Setup
+
+* **Packages**:
+  * pandas
+  * scikit-learn
+  * matplotlib
+  * seaborn
+
+* **Installation**:
+  ```bash
+  pip install pandas scikit-learn matplotlib seaborn
+  ```
+
+### Data
+
+* Download the dataset from [Mushroom Classification Dataset](https://www.kaggle.com/datasets/uciml/mushroom-classification/data). You will likely need to create an account before you can view and download the data.
+
+### Training
+
+* The test and training sections of the dataset is already divided in the .ipynb file in a 80/20 split.
+
+### Performance Evaluation
+
+* The .ipynb file currently runs with 100% accuracy. All numbers from earlier attempts were written down, and the files have since been deleted (the files were corrupted - it was pure luck that they were written down)
+
+## Citations
+
+[Pipeline Documentation](https://scikit-learn.org/1.5/modules/generated/sklearn.pipeline.Pipeline.html)
+
+[OneHotEncoder Documentation](https://scikit-learn.org/dev/modules/generated/sklearn.preprocessing.OneHotEncoder.html)
