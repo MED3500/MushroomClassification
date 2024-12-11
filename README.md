@@ -61,12 +61,7 @@
 
 * **Key Metrics**: Accuracy was the primary metric, with confusion matrices and classification reports to evaluate model performance.
 
-* **Results (values written down from other test files)**:
-  | Model            | Accuracy |
-  |------------------|----------|
-  | Decision Tree    | 100%     |
-  | Logistic Reg.    | 98%      |
-  | SVM (RBF)        | 97%      |
+* **Results**: 100% accuracy
 
 * **Visualization**: Confusion matrices highlight model performance across true positives, false positives, etc.
 
